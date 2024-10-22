@@ -12,7 +12,6 @@ setup(
         'lenstools',
         'chainconsumer',
         'cmasher',
-        'JaxPM @ git+https://github.com/DifferentiableUniverseInitiative/JaxPM.git',
         'sbi_lens @ git+https://github.com/DifferentiableUniverseInitiative/sbi_lens.git'
     ]
 )

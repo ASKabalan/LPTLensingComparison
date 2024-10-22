@@ -33,7 +33,7 @@ def lpt_lightcone(cosmo, initial_conditions, positions, a, mesh_shape):
     """
     Computes first order LPT displacement
     """
-    initial_force = pm_forces(positions, delta=initial_conditions).reshape(mesh_shape+[3])
+    initial_force = pm_forces(positions, mesh_shape=mesh_shape,delta=initial_conditions).reshape(mesh_shape+[3])
     a = jnp.atleast_1d(a)
     dx = growth_factor(cosmo, a).reshape([1,1,-1,1]) * initial_force
     return dx.reshape([-1,3])
